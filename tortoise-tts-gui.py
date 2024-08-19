@@ -55,7 +55,7 @@ while True:
         break
         
     # tortoise-tts only accepts a folder name, not a directory to load voices
-    # I have to grab the folder name from the file path
+    # VOICE_NAME grabs the folder name from the end of the file path
     # tortoise-tts only checks the tortoise/voices directory 
     if event == 'Choose Voice':
         voice_dir = sg.popup_get_folder("Select Voice Folder From the tortoise/voices Directory", initial_folder=current_dir + r'/tortoise/voices',)
