@@ -1,4 +1,4 @@
-# tortoise-tts-simpleGUI
+# tortoise-tts-gui
 This is a simple GUI created for the Tortoise-TTS module
 
 
