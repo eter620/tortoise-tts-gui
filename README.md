@@ -6,7 +6,7 @@ The project came about because a friend wanted to make AI voices for his videos 
 thought the current TTS programs were too difficult for him to use. Also he didn't 
 want to pay for a service.
 
-This interface works with both the Cuda version and the CPU version without needing 
+This interface works with both the Cuda version and the CPU version of pytorch without needing 
 any alterations
 
 instructions:
