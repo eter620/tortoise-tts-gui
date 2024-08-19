@@ -17,8 +17,6 @@ and ran with the cmd prompt: python tortoise-tts-gui.py
 
 
 import warnings
-import transformers
-
 
 import PySimpleGUI as sg
 
@@ -33,8 +31,6 @@ import IPython
 from tortoise.api import TextToSpeech
 from tortoise.utils.audio import load_audio, load_voice, load_voices
 
-# clean up the output a bit to remove unnecessary warning
-transformers.logging.set_verbosity_error()
 
 # initalize some variables 
 VOICE_NAME = 'NONE' #the name of the folder containing the voice samples
