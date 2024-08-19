@@ -92,7 +92,7 @@ while True:
 
                 text = values['-TEXT-']
                 preset = values['-PRESET-']
-                
+                SAVE_NAME = values['-SAVE-']
                         
                 voice_samples, conditioning_latents = load_voice(VOICE_NAME)
                 gen = tts.tts_with_preset(text, voice_samples=voice_samples, conditioning_latents=conditioning_latents, 
