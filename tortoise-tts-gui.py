@@ -92,12 +92,13 @@ while True:
 
                 text = values['-TEXT-']
                 preset = values['-PRESET-']
-                
+                file_name = values['-SAVE-']
+                        
                 voice_samples, conditioning_latents = load_voice(VOICE_NAME)
                 gen = tts.tts_with_preset(text, voice_samples=voice_samples, conditioning_latents=conditioning_latents, 
                               preset=preset)
-                torchaudio.save(values['-SAVE-'], gen.squeeze(0).cpu(), 24000)
-                IPython.display.Audio(values['-SAVE-'])
+                torchaudio.save(file_name, gen.squeeze(0).cpu(), 24000)
+                IPython.display.Audio(file_name)
 
                 sg.popup_ok("Finished")
 
