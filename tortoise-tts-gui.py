@@ -33,8 +33,8 @@ from tortoise.utils.audio import load_audio, load_voice, load_voices
 
 
 # initalize some variables 
-VOICE_NAME = 'NONE' #the name of the folder containing the voice samples
-SAVE_NAME = ''
+VOICE_NAME = 'NONE' # the name of the folder containing the voice samples
+SAVE_NAME = '' # name and path of the output audio file
 current_dir = os.getcwd()
 # changes the speed of generation and the quaility of the resulting voice
 presets_list = ['ultra_fast', 'fast', 'standard', 'high_quality']
@@ -92,13 +92,13 @@ while True:
 
                 text = values['-TEXT-']
                 preset = values['-PRESET-']
-                file_name = values['-SAVE-']
+                
                         
                 voice_samples, conditioning_latents = load_voice(VOICE_NAME)
                 gen = tts.tts_with_preset(text, voice_samples=voice_samples, conditioning_latents=conditioning_latents, 
                               preset=preset)
-                torchaudio.save(file_name, gen.squeeze(0).cpu(), 24000)
-                IPython.display.Audio(file_name)
+                torchaudio.save(SAVE_NAME, gen.squeeze(0).cpu(), 24000)
+                IPython.display.Audio(SAVE_NAME)
 
                 sg.popup_ok("Finished")
 
