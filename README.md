@@ -27,9 +27,9 @@ instructions:
       
             Note: failure to do the above steps will result in an error
             
-      4: install tortoise-tts-simpleGUI requirments.txt
+      4: install tortoise-tts-gui requirments.txt
       
-      5: place tortoise-tts-simpleGUI.py into the tortoise-tts-main directory
+      5: place tortoise-tts-gui.py into the tortoise-tts-main directory
       
       6: Run tortoise-tts-gui.py from the terminal with: python tortoise-tts-gui.py
 
